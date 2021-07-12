@@ -1,14 +1,34 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import table_Package from '../views/table_Package/table_Package.vue'
+import use_Table_Package from '../views/table_Package/use_Table_Package.vue'
+import layout from '../views/layout/layout.vue'
+import useSearchTablePackage from "../views/searchTable_Package/useSearchTablePackage";
+import useFormPackage from "../views/form_Package/useFormPackage";
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'table_Package',
-    component: table_Package
+    name: 'layout',
+    component: layout,
+    children: [
+      {
+        path: 'use_Table_Package',
+        name: '普通表格封装',
+        component: use_Table_Package
+      },
+      {
+        path: 'useSearchTablePackage',
+        name: '使用封装搜索及表格',
+        component: useSearchTablePackage
+      },
+      {
+        path: 'useFormPackage',
+        name: '使用封装表单提交',
+        component: useFormPackage
+      },
+    ]
   },
 ]
 

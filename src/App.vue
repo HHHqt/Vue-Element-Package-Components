@@ -5,6 +5,16 @@
 </template>
 
 <style lang="scss">
+  html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -17,6 +27,13 @@
   .view {
     width: 100%;
     height: 100%;
+    position: relative;
   }
-
+  .contentView {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background: #ececec;
+  }
 </style>
